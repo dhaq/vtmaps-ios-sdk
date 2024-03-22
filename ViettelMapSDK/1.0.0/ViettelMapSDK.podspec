@@ -21,13 +21,13 @@ Pod::Spec.new do |m|
   }
 
   m.platform              = :ios
-  m.ios.deployment_target = '9.0'
+  m.ios.deployment_target = '12.0'
 
   #m.requires_arc = true
 
-  m.vendored_frameworks = 'dynamic/Mapbox.framework'
-  m.module_name = 'Mapbox'
+  #m.vendored_frameworks = 'dynamic/Mapbox.framework'
+  m.module_name = 'MapboxMaps'
 
-  m.preserve_path = '**/*.bcsymbolmap'
+  #m.preserve_path = '**/*.bcsymbolmap'
 
 end
