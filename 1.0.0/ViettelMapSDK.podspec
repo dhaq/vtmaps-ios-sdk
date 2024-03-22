@@ -15,18 +15,18 @@ Pod::Spec.new do |m|
 
   m.source = {
  
-    :http => "https://raw.githubusercontent.com/dhaq/mapbox-maps-ios/main/MapboxMaps.zip",
+    :http => "https://files-maps.viettel.vn/ios-sdk/vtmap-ios-sdk.1.0.3.zip",
     #:http => "https://files.viettelmaps.com.vn:8080/ios-sdk/vtmap-ios-sdk.1.0.3.zip",   
     :flatten => true
   }
 
   m.platform              = :ios
-  m.ios.deployment_target = '12.0'
+  m.ios.deployment_target = '9.0'
 
   #m.requires_arc = true
 
-  #m.vendored_frameworks = 'dynamic/Mapbox.framework'
-  m.module_name = 'MapboxMaps'
+  m.vendored_frameworks = 'dynamic/Mapbox.framework'
+  m.module_name = 'Mapbox'
 
   m.preserve_path = '**/*.bcsymbolmap'
 
