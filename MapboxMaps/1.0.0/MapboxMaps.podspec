@@ -2,7 +2,7 @@ Pod::Spec.new do |m|
 
   version = '1.0.0'
 
-  m.name    = 'ViettelMapSDK'
+  m.name    = 'MapboxMaps'
   m.version = version
 
   m.summary           = 'Open source vector map solution for iOS.'
@@ -15,19 +15,26 @@ Pod::Spec.new do |m|
 
   m.source = {
  
-    :http => "https://files-maps.viettel.vn/ios-sdk/vtmap-ios-sdk.1.0.3.zip",
+    :http => "https://raw.githubusercontent.com/dhaq/mapbox-maps-ios/main/MapboxMaps.zip",
     #:http => "https://files.viettelmaps.com.vn:8080/ios-sdk/vtmap-ios-sdk.1.0.3.zip",   
     :flatten => true
   }
 
   m.platform              = :ios
-  m.ios.deployment_target = '9.0'
+  m.ios.deployment_target = '12.0'
+  m.swift_version = '5.9'
+  m.source_files = 'Sources/MapboxMaps/**/*.{swift,h}'
+  m.resource_bundles = { 'MapboxMapsResources' => ['Sources/**/*.{xcassets,strings}', 'Sources/MapboxMaps/MapboxMaps.json', 'Sources/MapboxMaps/PrivacyInfo.xcprivacy'] }
+
+  m.dependency 'MapboxCoreMaps', '11.3.0-beta.1'
+  m.dependency 'MapboxCommon', '24.3.0-beta.1'
+  m.dependency 'Turf', '2.8.0'
 
   #m.requires_arc = true
 
-  m.vendored_frameworks = 'dynamic/Mapbox.framework'
-  m.module_name = 'Mapbox'
+  # m.vendored_frameworks = 'dynamic/Mapbox.framework'
+  # m.module_name = 'Mapbox'
 
-  m.preserve_path = '**/*.bcsymbolmap'
+  # m.preserve_path = '**/*.bcsymbolmap'
 
 end
