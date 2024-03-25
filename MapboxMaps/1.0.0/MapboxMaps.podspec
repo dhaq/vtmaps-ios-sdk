@@ -15,7 +15,7 @@ Pod::Spec.new do |m|
 
   m.source = {
  
-    :http => "https://raw.githubusercontent.com/dhaq/mapbox-maps-ios/main/MapboxMaps.zip",
+    :http => "https://raw.githubusercontent.com/dhaq/vtmaps-ios-sdk/main/MapboxMaps.zip",
     #:http => "https://files.viettelmaps.com.vn:8080/ios-sdk/vtmap-ios-sdk.1.0.3.zip",   
     :flatten => true
   }
